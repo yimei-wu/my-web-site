@@ -2,6 +2,8 @@
 
 {% block content %}
 
-{% include "works.twig" %}
+{% for work in works %}
+   {% include "works.twig" %}
+{% endfor %}
 
 {% endblock %}
