@@ -40,13 +40,13 @@
     width: 700px;
     height: 25vh;
     background-color: $color;
-    position: absolute;
+    position: fixed;
     top: 50%;
     left: 3%;
     transform: translateY(-50%);
 }
 .info {
-    position: absolute;
+    position: fixed;
     bottom: 10%;
     left: 3%;
     width: 70vw;
@@ -74,7 +74,7 @@
         width: 94vw;
         height: 25vh;
         background-color: $color;
-        position: absolute;
+        position: fixed;
         top: 45%;
         left: 3%;
         transform: translateY(-50%);
