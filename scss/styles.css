@@ -526,6 +526,7 @@ body {
   height: 100%;
   width: 100%;
   cursor: none;
+  overflow: hidden;
 }
 
 .cursor {
