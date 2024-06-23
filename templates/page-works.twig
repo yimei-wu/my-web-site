@@ -1,25 +1,5 @@
 {% extends "base.twig" %}
 {% block content %}
-   <section id="projects">
-      <div class="swiper">
-         <div class="swiper-wrapper">
-            {% for work in works %}
-               <a href="{{ work.link }}"
-                  class="swiper-slide">
-                  <div class="">
-                     <h2>{{ work.title }}</h2>
-                     <h4>{{ work.year }}</h4>
-                     <p>{{ work.description }}</p>
-                  </div>
-                  <img src="{{ work.poster }}">
-                  <div class="">{{ work.numeration }}</div>
-               </a>
-            {% endfor %}
-         </div>
-      </div>
-      <button class="custom-next-button">NEXT</button>
-      <button class="custom-prev-button">PREV</button>
-   </section>
    <div class="works">
       <div class="frame f2"></div>
       <div class="frame f3"></div>
@@ -28,4 +8,28 @@
       <div class="frame f7"></div>
       <div class="frame f8"></div>
    </div>
+   <section id="projects">
+      <div class="swiper">
+         <div class="swiper-wrapper">
+            {% for work in works %}
+               <a href="{{ work.link }}"
+                  class="swiper-slide">
+                  <div class="project-info">
+                     <h2>{{ work.title }}</h2>
+                     <h4>{{ work.year }}</h4>
+                     <p>{{ work.description }}</p>
+                  </div>
+                  <div class="cover">
+                     <img src="{{ work.poster }}">
+                  </div>
+                  <div class="project-number">{{ work.numeration }}</div>
+               </a>
+            {% endfor %}
+         </div>
+      </div>
+      <div class="box-color">
+         <button class="custom-next-button">&#8594</button>
+         <button class="custom-prev-button">&#8592</button>         
+      </div>
+   </section>
 {% endblock %}
