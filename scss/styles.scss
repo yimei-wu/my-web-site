@@ -1,5 +1,7 @@
 @import "variables";
 @import "home";
+@import "about";
+@import "works";
 
 * {
     margin: 0;
@@ -8,19 +10,33 @@
 
 body {
     background-color: $bg-color;
-    color: $main-color-text;
-    font-family: $text;
+    color: $color-text;
+    font-family: $title;
     margin: 0;
     padding: 0;
     height: 100%;
     width: 100%;
+    cursor: none;
+}
+.cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: $bg-color;
+    width: 48px;
+    height: 48px;
+    z-index: 200;
+    border-radius: 100%;
+    pointer-events: none;
+    user-select: none;
+    mix-blend-mode: difference;
 }
 .logo {
     position: fixed;
     top: 4%;
-    left: 2%;
+    left: 3%;
     width: auto;
-    z-index: 1000;
+    z-index: 100;
 }
 
 .nav-bar {
@@ -28,56 +44,73 @@ body {
     top: 50%;
     right: 3%;
     transform: translateY(-50%);
-    writing-mode: vertical-rl;
-    /* text-orientation: sideways; */
     z-index: 1000;
-        ul {
-            display: flex;
-            list-style: none;
-            li {
-                margin: 9vh 0;
-                font-size: 22px;
-                a {
-                    text-decoration: none;
-                    color: $main-color-text;
-                    &:hover {
-                        color: $hover;
-                    }
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        align-items: flex-end;
+        li {
+            margin: 9vh 0;
+            font-size: 32px;
+            a {
+                text-decoration: none;
+                color: $transparent-text;
+                cursor: none;
+                &:hover {
+                    color: $transparent-color;
                 }
             }
-            li.active {
-                color: $hover;
+        }
+        li .active {
+            color: $color-text;
+            &:hover {
+                color: $color;
             }
-        }
-}
-
-.dots {
-    position: fixed;
-    top: 50%;
-    left: 4%;
-    transform: translateY(-50%);
-    font-size: 25px;
-    z-index: 1000;
-    ul {
-        list-style: none;
-        li {
-            position: relative;
-            margin: 15px 0;
-            color: $bg-color;
-            &::before {
-                content: '';
-                position: absolute;
-                left: 0;
-                top: 50%;
-                transform: translateY(-50%) rotate(45deg);
-                width: 10px;
-                height: 10px;
-                border: 2px solid $main-color-text;
-            }  
-        }
-        li.active-dot::before {
-                background-color: $hover;
-                border: 2pz solid $main-color-text;
         }
     }
 }
+
+.frame {
+    border: 1px solid $color-text;
+    position: fixed;
+}
+.f1{
+    top: 3%;
+    left: 0;
+    width: 100vw;
+}
+// .f2 {
+//     top: 0;
+//     right: 3%;
+//     height: 20%;
+// }
+// .f3 {
+//     bottom: 0;
+//     right: 3%;
+//     height: 20%;
+//     background-color: white;
+//     color: white;
+// }
+
+// .hidden {
+//     display: none;
+// }
+
+@media (max-width: 750px) {
+    .nav-bar {
+        top: 18%;
+        ul {
+            li {
+                margin: 3vh 0;
+                font-size: 28px;
+                gap: 0;                
+            }
+        }
+    }
+    .cursor {
+        display: none;
+    }
+}
+

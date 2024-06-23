@@ -1,8 +1,9 @@
 // PALETTE COLORI
-$bg-color: #010000;
-$color-title: #e39a9e;
-$main-color-text: #e9cdce;
-$hover: #c2999e;
+$bg-color: #efefef;
+$color-text: #242222;
+$transparent-text: #24222280;
+$color: #a0a4b8;
+$transparent-color: #a0a4b8b3;
 
 // FONT
 @font-face {
@@ -149,6 +150,13 @@ $hover: #c2999e;
     font-display: swap;
 }
 
+@font-face {
+    font-family: 'Audiowide';
+    src: url('Audiowide-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
 
-
+$title: "Audiowide", sans-serif;
 $text: "Montserrat", sans-serif;
