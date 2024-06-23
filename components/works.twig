@@ -10,7 +10,9 @@
   </nav>
  {% include "single-work.twig" %}
  <div class="box-color">
-    <button>&#8594</button>
+ {% if work.next and next_post %} 
+    <button><a href="http://yimei-wu.local/about/">&#8594</a></button>
+ {% endif %}   
  </div>
     <div class="frame f2"></div>
     <div class="frame f3"></div>
