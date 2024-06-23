@@ -1,5 +1,9 @@
 document.addEventListener("DOMContentLoaded", () => {
   createCustomCursor();
+
+  if (document.querySelector(".swiper")) {
+    initWorksSlider();
+  }
 });
 
 const createCustomCursor = () => {
@@ -27,6 +31,17 @@ const createCustomCursor = () => {
     gsap.to(element, {
       opacity: 0,
     });
+  });
+};
+
+const initWorksSlider = () => {
+  const swiper = new Swiper(".swiper", {
+    direction: "horizontal",
+    loop: true,
+    navigation: {
+      nextEl: ".custom-next-button",
+      prevEl: ".custom-prev-button",
+    },
   });
 };
 
@@ -70,31 +85,3 @@ const results = Splitting({ target: target, by: "chars" });
 //     if (!drawing) return;
 //     drawLine(lastMousePos, { x: e.clientX, y: e.clientY });
 //   });
-const home = document.getElementById("home");
-const about = document.getElementById("about");
-const works = document.getElementById("works");
-const hidden = document.getElementsByClassName("hidden");
-
-document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-  anchor.addEventListener("click", function (e) {
-    console.log(this.getAttribute("href"));
-    e.preventDefault();
-    document.querySelector(this.getAttribute("href")).scrollIntoView({
-      behavior: "smooth",
-    });
-  });
-});
-
-const changeVisibility = () => {
-  if (home.classList.contains("active")) {
-    home.classList.remove("hidden");
-  }
-  if (about.classList.contains("active")) {
-    about.classList.remove("hidden");
-  }
-  if (works.classList.contains("active")) {
-    works.classList.remove("hidden");
-  }
-};
-
-changeVisibility();

@@ -203,7 +203,7 @@
 }
 
 #target {
-  color: #B8BAC8;
+  color: #b8bac8;
   margin-bottom: 3vh;
 }
 
@@ -575,4 +575,42 @@ body {
   .cursor {
     display: none;
   }
+}
+#projects {
+  display: flex;
+  flex-direction: column;
+}
+
+.swiper {
+  width: 50%;
+  height: 100dvh;
+}
+.swiper img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16/9;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.custom-next-button {
+  position: fixed;
+  background: red;
+  width: 200px;
+  height: 200px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+}
+
+.custom-prev-button {
+  position: fixed;
+  background: blue;
+  width: 200px;
+  height: 200px;
+  top: 50%;
+  left: 40%;
+  transform: translate(-40%, -50%);
+  z-index: 1000;
 }/*# sourceMappingURL=styles.css.map */

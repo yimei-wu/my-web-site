@@ -4,83 +4,83 @@
 @import "works";
 
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    background-color: $bg-color;
-    color: $color-text;
-    font-family: $title;
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    width: 100%;
-    cursor: none;
-    overflow: hidden;
+  background-color: $bg-color;
+  color: $color-text;
+  font-family: $title;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  cursor: none;
+  overflow: hidden;
 }
 .cursor {
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: $bg-color;
-    width: 48px;
-    height: 48px;
-    z-index: 200;
-    border-radius: 100%;
-    pointer-events: none;
-    user-select: none;
-    mix-blend-mode: difference;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: $bg-color;
+  width: 48px;
+  height: 48px;
+  z-index: 200;
+  border-radius: 100%;
+  pointer-events: none;
+  user-select: none;
+  mix-blend-mode: difference;
 }
 .logo {
-    position: fixed;
-    top: 4%;
-    left: 3%;
-    width: auto;
-    z-index: 100;
+  position: fixed;
+  top: 4%;
+  left: 3%;
+  width: auto;
+  z-index: 100;
 }
 
 .nav-bar {
-    position: fixed;
-    top: 50%;
-    right: 3%;
-    transform: translateY(-50%);
-    z-index: 1000;
+  position: fixed;
+  top: 50%;
+  right: 3%;
+  transform: translateY(-50%);
+  z-index: 1000;
 
-    ul {
-        display: flex;
-        flex-direction: column;
-        list-style: none;
-        align-items: flex-end;
-        li {
-            margin: 9vh 0;
-            font-size: 32px;
-            a {
-                text-decoration: none;
-                color: $transparent-text;
-                cursor: none;
-                &:hover {
-                    color: $transparent-color;
-                }
-            }
+  ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    align-items: flex-end;
+    li {
+      margin: 9vh 0;
+      font-size: 32px;
+      a {
+        text-decoration: none;
+        color: $transparent-text;
+        cursor: none;
+        &:hover {
+          color: $transparent-color;
         }
-        li .current-menu-item {
-            color: $color-text;
-            &:hover {
-                color: $color;
-            }
-        }
+      }
     }
+    li .current-menu-item {
+      color: $color-text;
+      &:hover {
+        color: $color;
+      }
+    }
+  }
 }
 
 .frame {
-    border: 1px solid $color-text;
-    position: fixed;
+  border: 1px solid $color-text;
+  position: fixed;
 }
-.f1{
-    top: 3%;
-    left: 0;
-    width: 100vw;
+.f1 {
+  top: 3%;
+  left: 0;
+  width: 100vw;
 }
 // .f2 {
 //     top: 0;
@@ -100,18 +100,58 @@ body {
 // }
 
 @media (max-width: 750px) {
-    .nav-bar {
-        top: 18%;
-        ul {
-            li {
-                margin: 3vh 0;
-                font-size: 28px;
-                gap: 0;                
-            }
-        }
+  .nav-bar {
+    top: 18%;
+    ul {
+      li {
+        margin: 3vh 0;
+        font-size: 28px;
+        gap: 0;
+      }
     }
-    .cursor {
-        display: none;
-    }
+  }
+  .cursor {
+    display: none;
+  }
 }
 
+#projects {
+  display: flex;
+  flex-direction: column;
+}
+
+// Carousel
+
+.swiper {
+  width: 50%;
+  height: 100dvh;
+
+  img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+  }
+}
+
+.custom-next-button {
+  position: fixed;
+  background: red;
+  width: 200px;
+  height: 200px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+}
+
+.custom-prev-button {
+  position: fixed;
+  background: blue;
+  width: 200px;
+  height: 200px;
+  top: 50%;
+  left: 40%;
+  transform: translate(-40%, -50%);
+  z-index: 1000;
+}
