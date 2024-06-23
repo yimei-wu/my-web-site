@@ -16,11 +16,15 @@ $context = Timber::context();
 $timber_post = Timber::get_post();
 $context["post"] = $timber_post;
 
+$query = [
+    "post-type" => "work", // in questa variabile il computer va a prendere tutti i post "student"
+    "posts_per_page" => -1, // li prende tutti
+    "post_status" => "publish", // prende quelli che sono stati pubblicati
+];
+
+$context["work"] = Timber::get_posts($query);
+
 Timber::render(
-    [
-        "page-" . $timber_post->ID . ".twig",
-        "page-" . $timber_post->slug . ".twig",
-        "page.twig",
-    ],
+    ["page-" . $context["post"]->post_name . ".twig", "page.twig"],
     $context
 );

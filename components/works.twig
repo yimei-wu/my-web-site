@@ -2,19 +2,13 @@
    <nav>
       <div class="nav-bar">
           <ul>
-              <li><a href="#home">HOME</a></li>
-              <li><a href="#about">ABOUT_ME</a></li>
+              <li><a href="http://yimei-wu.local/">HOME</a></li>
+              <li><a href="http://yimei-wu.local/about/">ABOUT_ME</a></li>
               <li><a href="#works" class="active">WORKS</a></li>
           </ul>
       </div>
   </nav>
- <div class="project-info">
-    <h2>{{ post.meta("title") }}</h2>
-    <h4>{{ post.meta("year") }}</h4>
-    <p>{{ post.meta("description") }}</p>
- </div>
- <div class="cover-project"><img src="{{ post.meta("poster") }}" alt="img"></div>
- <div class="project-number">{{ post.meta("numeration") }}</div>
+ {% include "single-work.twig" %}
  <div class="box-color">
     <button>&#8594</button>
  </div>
