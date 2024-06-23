@@ -41,15 +41,19 @@
                 </svg>
                 </a>
             </h1>
-            {# <nav>
+            <nav>
                 <div class="nav-bar">
                     <ul>
-                        <li><a href="#home" class="active">HOME</a></li>
-                        <li><a href="#about">ABOUT_ME</a></li>
-                        <li><a href="#works">WORKS</a></li>
+                        {% for item in menu.items %}
+                        <li>
+                            <a class="{{ item.classes | join(" ") }}" target="{{ item.target }}"
+                                href="{{ item.link }}">{{ item.title }}</a>
+                        </li>                            
+                        {% endfor %}
+
                     </ul>
                 </div>
-            </nav> #}
+            </nav>
             <div class="frame f1"></div>
             {% block content %}
             {% endblock content %}

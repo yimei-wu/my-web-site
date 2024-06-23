@@ -545,10 +545,10 @@ body {
 .nav-bar ul li a:hover {
   color: rgba(160, 164, 184, 0.7019607843);
 }
-.nav-bar ul li .active {
+.nav-bar ul li .current-menu-item {
   color: #242222;
 }
-.nav-bar ul li .active:hover {
+.nav-bar ul li .current-menu-item:hover {
   color: #a0a4b8;
 }
 

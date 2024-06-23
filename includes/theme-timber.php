@@ -29,7 +29,7 @@ class StarterSite extends Site
      */
     public function add_to_context($context)
     {
-        $context["menu"] = Timber::get_menu();
+        $context["menu"] = Timber::get_menu(2);
         $context["site"] = $this;
 
         return $context;

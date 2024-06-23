@@ -64,7 +64,7 @@ body {
                 }
             }
         }
-        li .active {
+        li .current-menu-item {
             color: $color-text;
             &:hover {
                 color: $color;
