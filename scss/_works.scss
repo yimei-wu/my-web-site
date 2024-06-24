@@ -1,7 +1,7 @@
 .works {
   height: 100vh;
   width: 100vw;
-  position: relative;
+  // position: relative;
   .f2 {
     top: 0;
     right: 3%;
@@ -11,11 +11,13 @@
     bottom: 0px;
     right: 3%;
     height: 21%;
+    z-index: 30;
   }
   .f4 {
     bottom: 3%;
     left: 0;
     width: 100vw;
+    z-index: 30;
   }
   .f6 {
     bottom: 0;
@@ -25,7 +27,7 @@
   .f7 {
     top: calc(4% + 96px);
     left: 3%;
-    height: 60%;
+    height: 57%;
   }
   .f8 {
     top: 0;
@@ -36,9 +38,9 @@
 .project-info {
   position: fixed;
   top: 7%;
-  // left: 50%;
-  // width: 50%;
-  // transform: translate(-50%);
+  left: 50%;
+  width: 50%;
+  transform: translate(-50%);
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
@@ -56,10 +58,10 @@
 
 .cover {
   position: fixed;
-  bottom: 10%;
+  bottom: 15%;
   right: 50%;
   transform: translateX(50%);
-  width: 100%;
+  width: 60%;
   height: 60%;
 }
 .cover img {
@@ -70,7 +72,7 @@
 
 .project-number {
   position: fixed;
-  bottom: 5%;
+  bottom: 6%;
   left: 2%;
   font-size: 50px;
   writing-mode: vertical-lr;
@@ -105,8 +107,28 @@
   }
 }
 
-.swiper-slide {
-  width: 100vw;
+// SINGLE-WORK
+.details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100svh;
+  h1 {
+    font-size: 48px;
+  }
+  p {
+    font-family: 'Montserrat';
+    width: 70vw;
+    text-align: center;
+  }
+  .poster {
+    width: 70vw;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
 }
 
 // MEDIA QUERY
@@ -121,6 +143,8 @@
   .project-info {
     h4 {
       grid-column-start: 2;
+      display: flex;
+      align-items: flex-end;
     }
     p {
       font-size: 18px;
@@ -128,9 +152,40 @@
       grid-column-end: 3;
     }
   }
-  .cover-project {
-    width: 60%;
-    height: 40%;
+  .cover {
+    width: 80%;
+    height: 80%;
     right: 45%;
+    bottom: 0;
+  }
+  .works {
+    .f2 {
+        height: 5%;
+    }
+    .f3 {
+        height: 67%;
+    }
+  }
+}
+
+@media (max-width: 490px) {
+  .project-info {
+    top: 22%;
+    left: 40%;
+    h2 {
+      font-size: 20px;
+    }
+    h4 {
+      font-size: 16px;
+    }
+    p {
+      font-size: 18px;
+    }
+  }
+  .cover {
+    width: 76%;
+    height: 55%;
+    right: 45%;
+    bottom: 0;
   }
 }

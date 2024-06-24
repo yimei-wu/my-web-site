@@ -363,7 +363,6 @@
 .works {
   height: 100vh;
   width: 100vw;
-  position: relative;
 }
 .works .f2 {
   top: 0;
@@ -374,11 +373,13 @@
   bottom: 0px;
   right: 3%;
   height: 21%;
+  z-index: 30;
 }
 .works .f4 {
   bottom: 3%;
   left: 0;
   width: 100vw;
+  z-index: 30;
 }
 .works .f6 {
   bottom: 0;
@@ -388,7 +389,7 @@
 .works .f7 {
   top: calc(4% + 96px);
   left: 3%;
-  height: 60%;
+  height: 57%;
 }
 .works .f8 {
   top: 0;
@@ -399,6 +400,9 @@
 .project-info {
   position: fixed;
   top: 7%;
+  left: 50%;
+  width: 50%;
+  transform: translate(-50%);
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
@@ -416,10 +420,10 @@
 
 .cover {
   position: fixed;
-  bottom: 10%;
+  bottom: 15%;
   right: 50%;
   transform: translateX(50%);
-  width: 100%;
+  width: 60%;
   height: 60%;
 }
 
@@ -432,7 +436,7 @@
 
 .project-number {
   position: fixed;
-  bottom: 5%;
+  bottom: 6%;
   left: 2%;
   font-size: 50px;
   writing-mode: vertical-lr;
@@ -468,23 +472,72 @@
   right: 7vw;
 }
 
-.swiper-slide {
-  width: 100vw;
+.details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100svh;
+}
+.details h1 {
+  font-size: 48px;
+}
+.details p {
+  font-family: "Montserrat";
+  width: 70vw;
+  text-align: center;
+}
+.details .poster {
+  width: 70vw;
+}
+.details .poster img {
+  width: 100%;
+  height: 100%;
 }
 
 @media (max-width: 750px) {
   .project-info h4 {
     grid-column-start: 2;
+    display: flex;
+    align-items: flex-end;
   }
   .project-info p {
     font-size: 18px;
     grid-column-start: 1;
     grid-column-end: 3;
   }
-  .cover-project {
-    width: 60%;
-    height: 40%;
+  .cover {
+    width: 80%;
+    height: 80%;
     right: 45%;
+    bottom: 0;
+  }
+  .works .f2 {
+    height: 5%;
+  }
+  .works .f3 {
+    height: 67%;
+  }
+}
+@media (max-width: 490px) {
+  .project-info {
+    top: 22%;
+    left: 40%;
+  }
+  .project-info h2 {
+    font-size: 20px;
+  }
+  .project-info h4 {
+    font-size: 16px;
+  }
+  .project-info p {
+    font-size: 18px;
+  }
+  .cover {
+    width: 76%;
+    height: 55%;
+    right: 45%;
+    bottom: 0;
   }
 }
 * {
@@ -585,20 +638,13 @@ body {
   }
 }
 #projects {
-  display: flex;
-  flex-direction: column;
   height: 100svh;
   width: 100vw;
+  position: fixed;
+  top: 0;
 }
 
 .swiper {
-  width: 50%;
-  height: 100dvh;
-}
-.swiper img {
-  width: 100%;
-  height: auto;
-  aspect-ratio: 16/9;
-  -o-object-fit: cover;
-     object-fit: cover;
+  width: 100vw;
+  height: 100vh;
 }/*# sourceMappingURL=styles.css.map */

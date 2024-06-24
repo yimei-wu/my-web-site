@@ -115,23 +115,17 @@ body {
   }
 }
 
+// WORK STYLES
 #projects {
-  display: flex;
-  flex-direction: column;
   height: 100svh;
   width: 100vw;
+  position: fixed;
+  top: 0;
 }
 
 // Carousel
 
 .swiper {
-  width: 50%;
-  height: 100dvh;
-
-  img {
-    width: 100%;
-    height: auto;
-    aspect-ratio: 16/9;
-    object-fit: cover;
-  }
+  width: 100vw;
+  height: 100vh;
 } 

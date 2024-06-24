@@ -1,7 +1,10 @@
 {% extends "base.twig" %}
 {% block content %}
-   {# TODO  #}
-   <h1>Template visualizzazione progetto singolo</h1>
-   <h1>{{ post.title }}</h1>
-   <div>{{ post.description }}</div>
+
+   <div class="details">
+      <h1>{{ post.title }}</h1>
+      <p>{{ post.description }}</p>
+      <div class="poster"><img src="{{ post.poster }}"></div>
+   </div>  
+
 {% endblock %}
